@@ -1,3 +1,4 @@
+
 trigger:
 - main
 
@@ -51,7 +52,7 @@ jobs:
 
   - task: TerraformTaskV2@2
     displayName: terraform apply tfplan
-    condition: eq(variables.anyTfChanges, true)  # Uncomment this line if you want a condition
+    #condition: eq(variables.anyTfChanges, true)#
     inputs:
       provider: 'azurerm'
       command: 'apply'
